@@ -19,6 +19,9 @@ class DealsListViewController: UIViewController {
   
   var presenter: DealsListViewControllerToPresenterProtocol?
   var dealsListView: DealsListViewEntity!
+  let navigationHeigth: CGFloat = 44
+  var lastContentOffsetTableView: CGFloat = 0
+  var navigationHeaderConstraintHeight: NSLayoutConstraint?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,6 +29,11 @@ class DealsListViewController: UIViewController {
     setupElements()
     addConstraintsInElements()
     presenter?.fetchDeals()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationHideAndShow(constant: navigationHeigth)
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -38,6 +46,7 @@ class DealsListViewController: UIViewController {
   }
   
   func setupElements() {
+    UIApplication.shared.statusBarView?.backgroundColor = Colors.blue
     view.backgroundColor = Colors.lightGrey
     tableView.delegate = self
     tableView.dataSource = self
@@ -53,21 +62,36 @@ class DealsListViewController: UIViewController {
   }
   
   func addConstraintsInElements() {
-    let navigationHeigth = UIApplication.shared.statusBarFrame.size.height + 44
-    navigation.addConstraint(attribute: .top, alignElement: view, alignElementAttribute: .top, constant: 0)
+    navigation.addConstraint(attribute: .top, alignElement: view, alignElementAttribute: .top, constant: UIApplication.shared.statusBarFrame.size.height)
     navigation.addConstraint(attribute: .right, alignElement: view, alignElementAttribute: .right, constant: 0)
     navigation.addConstraint(attribute: .left, alignElement: view, alignElementAttribute: .left, constant: 0)
-    navigation.addConstraint(attribute: .height, alignElement: nil, alignElementAttribute: .notAnAttribute, constant: navigationHeigth)
+    navigationHeaderConstraintHeight = navigation.addConstraint(attribute: .height, alignElement: nil, alignElementAttribute: .notAnAttribute, constant: navigationHeigth)
     navigationTitle.addConstraint(attribute: .left, alignElement: navigation, alignElementAttribute: .left, constant: 15)
     navigationTitle.addConstraint(attribute: .bottom, alignElement: navigation, alignElementAttribute: .bottom, constant: 0)
     navigationTitle.addConstraint(attribute: .height, alignElement: nil, alignElementAttribute: .notAnAttribute, constant: 44)
-    
     tableView.addConstraint(attribute: .top, alignElement: navigation, alignElementAttribute: .bottom, constant: 0)
     tableView.addConstraint(attribute: .right, alignElement: view, alignElementAttribute: .right, constant: 0)
     tableView.addConstraint(attribute: .bottom, alignElement: view, alignElementAttribute: .bottom, constant: 0)
     tableView.addConstraint(attribute: .left, alignElement: view, alignElementAttribute: .left, constant: 0)
     loader.addConstraint(attribute: .centerX, alignElement: view, alignElementAttribute: .centerX, constant: 0)
     loader.addConstraint(attribute: .centerY, alignElement: view, alignElementAttribute: .centerY, constant: 0)
+  }
+  
+  func navigationHideAndShow(constant: CGFloat) {
+    guard let constraintHeightNavigation = navigationHeaderConstraintHeight else { return }
+    constraintHeightNavigation.constant = constant
+  }
+  
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    lastContentOffsetTableView = scrollView.contentOffset.y
+  }
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    if lastContentOffsetTableView < scrollView.contentOffset.y {
+      navigationHideAndShow(constant: 0)
+    } else {
+      navigationHideAndShow(constant: navigationHeigth)
+    }
   }
   
 }

@@ -10,6 +10,7 @@
 		E37A5313225EEC7E00FB1C99 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E37A5312225EEC7E00FB1C99 /* .gitignore */; };
 		E37A5316225EECF800FB1C99 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A5315225EECF800FB1C99 /* Kingfisher.framework */; };
 		E37A5318225FAE4C00FB1C99 /* DealsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A5317225FAE4C00FB1C99 /* DealsEntity.swift */; };
+		E37A531A225FC88D00FB1C99 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A5319225FC88D00FB1C99 /* UIApplicationExtension.swift */; };
 		E3D7123D225E51A400FD7CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7123C225E51A400FD7CAB /* AppDelegate.swift */; };
 		E3D71244225E51A600FD7CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D71243225E51A600FD7CAB /* Assets.xcassets */; };
 		E3D71247225E51A600FD7CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D71245225E51A600FD7CAB /* LaunchScreen.storyboard */; };
@@ -52,6 +53,7 @@
 		E37A5312225EEC7E00FB1C99 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E37A5315225EECF800FB1C99 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		E37A5317225FAE4C00FB1C99 /* DealsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsEntity.swift; sourceTree = "<group>"; };
+		E37A5319225FC88D00FB1C99 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		E3D71239225E51A400FD7CAB /* PeixeUrbano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeixeUrbano.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D7123C225E51A400FD7CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D71243225E51A600FD7CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				E3D7127D225EB27E00FD7CAB /* UILabelExtension.swift */,
 				E3D7127F225EB43000FD7CAB /* UIStackViewExtension.swift */,
 				E3D71274225E6A6400FD7CAB /* UIViewExtension.swift */,
+				E37A5319225FC88D00FB1C99 /* UIApplicationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				E3D71298225EE5F400FD7CAB /* FloatExtension.swift in Sources */,
 				E3D7127E225EB27E00FD7CAB /* UILabelExtension.swift in Sources */,
 				E3D7127A225E737A00FD7CAB /* DealsListCell.swift in Sources */,
+				E37A531A225FC88D00FB1C99 /* UIApplicationExtension.swift in Sources */,
 				E3D71265225E5E1700FD7CAB /* DealsListViewController.swift in Sources */,
 				E3D7128C225ED6C100FD7CAB /* DealsListDealEntity.swift in Sources */,
 				E3D71267225E5E3400FD7CAB /* DealsListPresenter.swift in Sources */,

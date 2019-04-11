@@ -16,7 +16,11 @@ extension UIView {
     }
   }
   
-  func addConstraint(attribute: NSLayoutConstraint.Attribute, alignElement: UIView?, alignElementAttribute: NSLayoutConstraint.Attribute, constant: CGFloat, typeSize: NSLayoutConstraint.Relation = .equal) {
+  @discardableResult func addConstraint(attribute: NSLayoutConstraint.Attribute,
+                                        alignElement: UIView?,
+                                        alignElementAttribute: NSLayoutConstraint.Attribute,
+                                        constant: CGFloat,
+                                        typeSize: NSLayoutConstraint.Relation = .equal) -> NSLayoutConstraint {
     self.translatesAutoresizingMaskIntoConstraints = false
     let constraint = NSLayoutConstraint(
       item: self,
@@ -27,7 +31,8 @@ extension UIView {
       multiplier: 1,
       constant: (attribute == .right || attribute == .bottom) ? (constant * -1) : constant
     )
-    NSLayoutConstraint.activate([constraint])
+    constraint.isActive = true
+    return constraint
   }
   
 }

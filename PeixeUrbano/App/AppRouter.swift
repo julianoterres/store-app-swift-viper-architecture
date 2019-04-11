@@ -12,6 +12,7 @@ class AppRouter {
   
   func createTabBar() -> UITabBarController {
     let dealsListRouter = DealsListRouter()
+    
     let viewControllerCity = dealsListRouter.createModule(screenType: .city)
     viewControllerCity.tabBarItem = UITabBarItem(title: "Na cidade", image: UIImage(named: "skyline"), selectedImage: UIImage(named: "skyline"))
     
