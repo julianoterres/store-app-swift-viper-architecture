@@ -26,7 +26,7 @@ class DealsListPresenter {
 }
 
 // MARK: Methods of DealsListViewControllerToPresenterProtocol
-extension DealsListPresenter: DealsListViewControllerToPresenterProtocol{
+extension DealsListPresenter: DealsListViewControllerToPresenterProtocol {
   
   func fetchDeals() {
     switch getScreenType() {

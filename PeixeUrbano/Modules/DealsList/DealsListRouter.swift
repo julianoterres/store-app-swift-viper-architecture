@@ -23,8 +23,10 @@ class DealsListRouter: DealsListRouterProtocol {
     let network = Network()
     let api = API()
     let dealsListViewEntity = DealsListViewEntity(deals: [], titleNavitagion: "")
+    
     viewController.presenter = presenter
     viewController.dealsListView = dealsListViewEntity
+    
     presenter.interactor = interactor
     presenter.router = router
     presenter.viewController = viewController
