@@ -9,28 +9,49 @@
 import Foundation
 import UIKit
 
-protocol DealsListViewControllerProtocol: class {
-  func displayFetchedDeals(dealsView: [DealsViewEntity])
+// MARK: Methods of ViewController to Presenter
+protocol DealsListViewControllerToPresenterProtocol: class {
+  func fetchDeals()
 }
 
-protocol DealsListPresenterProtocol: class {
-  func fetchDeals()
-  func fetchedDeals(dealsView: [DealsViewEntity])
-  func fetchedDealsError(message: String)
+// MARK: Methods of Presenter to Interactor
+protocol DealsListPresenterToInteractorProtocol: class {
+  func fetchDealsCity()
+  func fetchDealsTravel()
+  func fetchDealsProducts()
 }
 
-protocol DealsListInteractorProtocol: class {
-  func fetchDeals()
+// MARK: Methods of Presenter to Router
+protocol DealsListPresenterToRouterProtocol: class {
+  func showAlert(message: String)
+}
+
+// MARK: Methods of Interactor to Worker
+protocol DealsListInteractorToWorkerProtocol: class {
+  func fetchDealsCity()
+  func fetchDealsTravel()
+  func fetchDealsProducts()
+}
+
+// MARK: Methods of Worker to Interactor
+protocol DealsListWorkerToInteractorProtocol: class {
   func fetchedDeals(dealsListEntity: DealsListEntity)
-  func fetchedDealsError(message: String)
+  func fetchedDealsFail(message: String)
 }
 
-protocol DealsListWorkerProtocol: class {
-  func fetchDeals()
+// MARK: Methods of Interactor to Presenter
+protocol DealsListInteractorToPresenter: class {
+  func fetchedDeals(deals: [DealsEntity])
+  func fetchedDealsFail(message: String)
 }
+
+// MARK: Methods of Presenter to ViewController
+protocol DealsListPresenterToViewControllerProtocol: class {
+  func displayFetchedDeals(dealsView: DealsListViewEntity)
+}
+
 
 protocol DealsListRouterProtocol: class {
   var viewController: UIViewController? { get set }
-  func createModule() -> DealsListViewController
-  func showAlert(message: String)
+  func createModule(screenType: ScreenType) -> DealsListViewController
 }

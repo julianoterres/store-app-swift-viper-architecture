@@ -14,7 +14,7 @@ class DealsListRouter: DealsListRouterProtocol {
   
   weak var viewController: UIViewController?
   
-  func createModule() -> DealsListViewController {
+  func createModule(screenType: ScreenType) -> DealsListViewController {
     let viewController = DealsListViewController()
     let presenter = DealsListPresenter()
     let interactor = DealsListInteractor()
@@ -22,10 +22,13 @@ class DealsListRouter: DealsListRouterProtocol {
     let router = DealsListRouter()
     let network = Network()
     let api = API()
+    let dealsListViewEntity = DealsListViewEntity(deals: [], titleNavitagion: "")
     viewController.presenter = presenter
+    viewController.dealsListView = dealsListViewEntity
     presenter.interactor = interactor
     presenter.router = router
     presenter.viewController = viewController
+    presenter.screenType = screenType
     interactor.worker = worker
     interactor.presenter = presenter
     worker.interactor = interactor
@@ -35,6 +38,11 @@ class DealsListRouter: DealsListRouterProtocol {
     return viewController
   }
   
+}
+
+// MARK: Methods of DealsListPresenterToRouterProtocol
+extension DealsListRouter: DealsListPresenterToRouterProtocol {
+  
   func showAlert(message: String) {
     let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -42,3 +50,4 @@ class DealsListRouter: DealsListRouterProtocol {
   }
   
 }
+

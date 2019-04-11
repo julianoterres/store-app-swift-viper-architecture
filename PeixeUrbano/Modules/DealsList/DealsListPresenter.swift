@@ -9,21 +9,59 @@
 import Foundation
 
 // MARK: Methods of DealsListPresenter
-class DealsListPresenter: DealsListPresenterProtocol {
+class DealsListPresenter {
   
-  weak var viewController: DealsListViewControllerProtocol?
-  var interactor: DealsListInteractorProtocol?
-  var router: DealsListRouterProtocol?
+  weak var viewController: DealsListPresenterToViewControllerProtocol?
+  var interactor: DealsListPresenterToInteractorProtocol?
+  var router: DealsListPresenterToRouterProtocol?
+  var screenType: ScreenType?
+  
+  func getScreenType() -> ScreenType {
+    guard let fetchType = screenType else {
+      return .city
+    }
+    return fetchType
+  }
+  
+}
+
+// MARK: Methods of DealsListViewControllerToPresenterProtocol
+extension DealsListPresenter: DealsListViewControllerToPresenterProtocol{
   
   func fetchDeals() {
-    interactor?.fetchDeals()
+    switch getScreenType() {
+    case .city:
+      interactor?.fetchDealsCity()
+    case .travel:
+      interactor?.fetchDealsTravel()
+    default:
+      interactor?.fetchDealsProducts()
+    }
   }
   
-  func fetchedDeals(dealsView: [DealsViewEntity]) {
-    viewController?.displayFetchedDeals(dealsView: dealsView)
+}
+  
+// MARK: Methods of DealsListInteractorToPresenter
+extension DealsListPresenter: DealsListInteractorToPresenter{
+  
+  func fetchedDeals(deals: [DealsEntity]) {
+    var titleNavigation = ""
+    switch getScreenType() {
+    case .city:
+      titleNavigation = "Florianópolis"
+    case .travel:
+      titleNavigation = "Viagens"
+    case .products:
+      titleNavigation = "Produtos"
+    }
+    let dealsListView = DealsListViewEntity(
+      deals: deals,
+      titleNavitagion: titleNavigation
+    )
+    viewController?.displayFetchedDeals(dealsView: dealsListView)
   }
   
-  func fetchedDealsError(message: String) {
+  func fetchedDealsFail(message: String) {
     router?.showAlert(message: message)
   }
   

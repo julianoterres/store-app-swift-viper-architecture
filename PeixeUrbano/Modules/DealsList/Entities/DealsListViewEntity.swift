@@ -1,5 +1,5 @@
 //
-//  DealsViewEntity.swift
+//  DealsListViewEntity.swift
 //  PeixeUrbano
 //
 //  Created by Juliano Terres on 10/04/19.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-struct DealsViewEntity {
-  let image: URL
-  let title: String
-  let partner: String
-  let price: String
+struct DealsListViewEntity {
+  let deals: [DealsEntity]
+  let titleNavitagion: String
 }

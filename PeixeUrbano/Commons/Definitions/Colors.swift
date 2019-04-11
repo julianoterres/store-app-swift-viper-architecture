@@ -30,4 +30,8 @@ class Colors {
     return UIColor(red:0.00, green:0.42, blue:0.80, alpha:1.0)
   }
   
+  static var lightGrey: UIColor {
+    return UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.0)
+  }
+  
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E37A5313225EEC7E00FB1C99 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E37A5312225EEC7E00FB1C99 /* .gitignore */; };
 		E37A5316225EECF800FB1C99 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A5315225EECF800FB1C99 /* Kingfisher.framework */; };
+		E37A5318225FAE4C00FB1C99 /* DealsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A5317225FAE4C00FB1C99 /* DealsEntity.swift */; };
 		E3D7123D225E51A400FD7CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7123C225E51A400FD7CAB /* AppDelegate.swift */; };
 		E3D71244225E51A600FD7CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D71243225E51A600FD7CAB /* Assets.xcassets */; };
 		E3D71247225E51A600FD7CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D71245225E51A600FD7CAB /* LaunchScreen.storyboard */; };
@@ -33,7 +34,7 @@
 		E3D71290225EDCAF00FD7CAB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7128F225EDCAF00FD7CAB /* Api.swift */; };
 		E3D71292225EDDA500FD7CAB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71291225EDDA500FD7CAB /* Protocols.swift */; };
 		E3D71294225EDE1000FD7CAB /* Enuns.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71293225EDE1000FD7CAB /* Enuns.swift */; };
-		E3D71296225EE0E200FD7CAB /* DealsViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71295225EE0E200FD7CAB /* DealsViewEntity.swift */; };
+		E3D71296225EE0E200FD7CAB /* DealsListViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71295225EE0E200FD7CAB /* DealsListViewEntity.swift */; };
 		E3D71298225EE5F400FD7CAB /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71297225EE5F400FD7CAB /* FloatExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		E37A5312225EEC7E00FB1C99 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E37A5315225EECF800FB1C99 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		E37A5317225FAE4C00FB1C99 /* DealsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsEntity.swift; sourceTree = "<group>"; };
 		E3D71239225E51A400FD7CAB /* PeixeUrbano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeixeUrbano.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D7123C225E51A400FD7CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D71243225E51A600FD7CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +80,7 @@
 		E3D7128F225EDCAF00FD7CAB /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E3D71291225EDDA500FD7CAB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		E3D71293225EDE1000FD7CAB /* Enuns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enuns.swift; sourceTree = "<group>"; };
-		E3D71295225EE0E200FD7CAB /* DealsViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsViewEntity.swift; sourceTree = "<group>"; };
+		E3D71295225EE0E200FD7CAB /* DealsListViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListViewEntity.swift; sourceTree = "<group>"; };
 		E3D71297225EE5F400FD7CAB /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,7 +248,8 @@
 				E3D71289225ED6AC00FD7CAB /* DealsListResponseEntity.swift */,
 				E3D7128B225ED6C100FD7CAB /* DealsListDealEntity.swift */,
 				E3D7128D225ED6DA00FD7CAB /* DealsListPartnerEntity.swift */,
-				E3D71295225EE0E200FD7CAB /* DealsViewEntity.swift */,
+				E3D71295225EE0E200FD7CAB /* DealsListViewEntity.swift */,
+				E37A5317225FAE4C00FB1C99 /* DealsEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -378,7 +381,7 @@
 				E3D71275225E6A6400FD7CAB /* UIViewExtension.swift in Sources */,
 				E3D7127C225EB0F500FD7CAB /* Colors.swift in Sources */,
 				E3D7123D225E51A400FD7CAB /* AppDelegate.swift in Sources */,
-				E3D71296225EE0E200FD7CAB /* DealsViewEntity.swift in Sources */,
+				E3D71296225EE0E200FD7CAB /* DealsListViewEntity.swift in Sources */,
 				E3D71290225EDCAF00FD7CAB /* Api.swift in Sources */,
 				E3D7128E225ED6DA00FD7CAB /* DealsListPartnerEntity.swift in Sources */,
 				E3D7128A225ED6AC00FD7CAB /* DealsListResponseEntity.swift in Sources */,
@@ -393,6 +396,7 @@
 				E3D71280225EB43000FD7CAB /* UIStackViewExtension.swift in Sources */,
 				E3D7126F225E602500FD7CAB /* AppRouter.swift in Sources */,
 				E3D7126B225E5E6A00FD7CAB /* DealsListWorker.swift in Sources */,
+				E37A5318225FAE4C00FB1C99 /* DealsEntity.swift in Sources */,
 				E3D71292225EDDA500FD7CAB /* Protocols.swift in Sources */,
 				E3D71288225ED68800FD7CAB /* DealsListEntity.swift in Sources */,
 				E3D71269225E5E5000FD7CAB /* DealsListInteractor.swift in Sources */,

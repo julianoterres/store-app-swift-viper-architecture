@@ -22,10 +22,11 @@ class DealsListCell: UITableViewCell {
   static let height = CGFloat(243)
   static let identifier = "DealsListCell"
   
-  var deal: DealsViewEntity?
+  var deal: DealsEntity?
   
-  func setup(dealView: DealsViewEntity) {
-    deal = dealView
+  func setup(dealsView: DealsEntity?) {
+    selectionStyle = .none
+    deal = dealsView
     addElementsInScreen()
     setupElements()
     addConstraintsInElements()

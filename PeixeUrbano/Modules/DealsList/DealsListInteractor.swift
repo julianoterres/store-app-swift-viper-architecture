@@ -9,30 +9,47 @@
 import Foundation
 
 // MARK: Methods of DealsListInteractor
-class DealsListInteractor: DealsListInteractorProtocol {
+class DealsListInteractor {
   
-  weak var presenter: DealsListPresenterProtocol?
-  var worker: DealsListWorkerProtocol?
+  weak var presenter: DealsListInteractorToPresenter?
+  var worker: DealsListInteractorToWorkerProtocol?
   
-  func fetchDeals() {
-    worker?.fetchDeals()
+}
+
+// MARK: Methods of DealsListPresenterToInteractorProtocol
+extension DealsListInteractor: DealsListPresenterToInteractorProtocol {
+  
+  func fetchDealsCity() {
+    worker?.fetchDealsCity()
   }
   
+  func fetchDealsTravel() {
+    worker?.fetchDealsTravel()
+  }
+  
+  func fetchDealsProducts() {
+    worker?.fetchDealsProducts()
+  }
+  
+}
+
+// MARK: Methods of DealsListWorkerToInteractorProtocol
+extension DealsListInteractor: DealsListWorkerToInteractorProtocol {
+  
   func fetchedDeals(dealsListEntity: DealsListEntity) {
-    let deals = dealsListEntity.response.deals.map({ (deal) -> DealsViewEntity in
-      return DealsViewEntity (
+    let deals = dealsListEntity.response.deals.map({ (deal) -> DealsEntity in
+      return DealsEntity (
         image: URL(string: deal.dealImage)!,
         title: deal.short_title,
         partner: deal.partner.name,
         price: deal.min_sale_price.currency
       )
     })
-    presenter?.fetchedDeals(dealsView: deals)
+    presenter?.fetchedDeals(deals: deals)
   }
   
-  func fetchedDealsError(message: String) {
-    
+  func fetchedDealsFail(message: String) {
+    presenter?.fetchedDealsFail(message: message)
   }
-  
   
 }

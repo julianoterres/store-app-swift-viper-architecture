@@ -10,3 +10,9 @@ enum NetworkHttpMethod: String {
   case get = "GET"
   case post = "POST"
 }
+
+enum ScreenType: String {
+  case city
+  case travel
+  case products
+}
