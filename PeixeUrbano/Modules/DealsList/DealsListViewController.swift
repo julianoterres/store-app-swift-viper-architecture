@@ -22,6 +22,7 @@ class DealsListViewController: UIViewController {
   let navigationHeigth: CGFloat = 44
   var lastContentOffsetTableView: CGFloat = 0
   var navigationHeaderConstraintHeight: NSLayoutConstraint?
+  var tabBarHiding = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,11 +30,6 @@ class DealsListViewController: UIViewController {
     setupElements()
     addConstraintsInElements()
     presenter?.fetchDeals()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    navigationHideAndShow(constant: navigationHeigth)
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -77,9 +73,15 @@ class DealsListViewController: UIViewController {
     loader.addConstraint(attribute: .centerY, alignElement: view, alignElementAttribute: .centerY, constant: 0)
   }
   
-  func navigationHideAndShow(constant: CGFloat) {
-    guard let constraintHeightNavigation = navigationHeaderConstraintHeight else { return }
-    constraintHeightNavigation.constant = constant
+  func hideNavigationTabBar(_ hide: Bool) {
+    guard let constraintHeightNavigation = navigationHeaderConstraintHeight, let tab = self.tabBarController else { return }
+    let tabPositionY = view.frame.size.height - tab.tabBar.frame.size.height
+    let tabPositionYNegative = view.frame.size.height + tab.tabBar.frame.size.height
+    constraintHeightNavigation.constant = (hide) ? 0 : navigationHeigth
+    UIView.animate(withDuration: 0.5) {
+      tab.tabBar.frame.origin.y = (hide) ? tabPositionYNegative : tabPositionY
+      self.view.layoutIfNeeded()
+    }
   }
   
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -88,9 +90,9 @@ class DealsListViewController: UIViewController {
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     if lastContentOffsetTableView < scrollView.contentOffset.y {
-      navigationHideAndShow(constant: 0)
+      hideNavigationTabBar(true)
     } else {
-      navigationHideAndShow(constant: navigationHeigth)
+      hideNavigationTabBar(false)
     }
   }
   

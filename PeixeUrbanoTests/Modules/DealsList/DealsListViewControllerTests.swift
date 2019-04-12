@@ -28,18 +28,11 @@ class DealsListViewControllerTests: QuickSpec {
         viewController.presenter = presenter
         viewController.dealsListView = dealsListViewEntity
         viewController.viewDidLoad()
-        viewController.viewWillAppear(false)
       }
       
       describe("When viewController execute the method viewDidLoad") {
         it("then should call a method fetchDeals at presenter") {
           expect(presenter.functionCalled) == true
-        }
-      }
-      
-      describe("When viewController execute the method viewWillAppear") {
-        it("then should show navigator top") {
-          expect(viewController.navigationHeaderConstraintHeight?.constant) == 44
         }
       }
       
