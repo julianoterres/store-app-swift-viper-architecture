@@ -59,6 +59,6 @@ protocol DealsListPresenterToViewControllerProtocol: class {
 // MARK: Methods of DealsListRouterProtocol
 protocol DealsListRouterProtocol: class {
   var viewController: UIViewController? { get set }
-  func createModule(screenType: ScreenType) -> DealsListViewController
+  func buildModule(screenType: ScreenType) -> UIViewController
 }
 

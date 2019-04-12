@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   private func mainScreen() {
     let appRouter = AppRouter()
-    let tabBar = appRouter.createTabBar()
+    let tabBar = appRouter.buildTabBar()
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = tabBar
     window?.makeKeyAndVisible()

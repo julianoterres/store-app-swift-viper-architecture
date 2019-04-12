@@ -11,10 +11,12 @@
 		E37A5316225EECF800FB1C99 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A5315225EECF800FB1C99 /* Kingfisher.framework */; };
 		E37A5318225FAE4C00FB1C99 /* DealsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A5317225FAE4C00FB1C99 /* DealsEntity.swift */; };
 		E37A531A225FC88D00FB1C99 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A5319225FC88D00FB1C99 /* UIApplicationExtension.swift */; };
+		E3A76F93225FD5C20004C7B2 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = E3A76F92225FD5C20004C7B2 /* Cartfile */; };
+		E3A76F9E225FE0210004C7B2 /* DealsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A76F9D225FE0210004C7B2 /* DealsListViewControllerTests.swift */; };
+		E3A76FA1225FE1650004C7B2 /* DealsListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A76FA0225FE1650004C7B2 /* DealsListPresenterSpy.swift */; };
 		E3D7123D225E51A400FD7CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7123C225E51A400FD7CAB /* AppDelegate.swift */; };
 		E3D71244225E51A600FD7CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D71243225E51A600FD7CAB /* Assets.xcassets */; };
 		E3D71247225E51A600FD7CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D71245225E51A600FD7CAB /* LaunchScreen.storyboard */; };
-		E3D71252225E51A600FD7CAB /* PeixeUrbanoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71251225E51A600FD7CAB /* PeixeUrbanoTests.swift */; };
 		E3D71263225E5C5F00FD7CAB /* DealsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71262225E5C5F00FD7CAB /* DealsListProtocols.swift */; };
 		E3D71265225E5E1700FD7CAB /* DealsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71264225E5E1700FD7CAB /* DealsListViewController.swift */; };
 		E3D71267225E5E3400FD7CAB /* DealsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71266225E5E3400FD7CAB /* DealsListPresenter.swift */; };
@@ -37,6 +39,19 @@
 		E3D71294225EDE1000FD7CAB /* Enuns.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71293225EDE1000FD7CAB /* Enuns.swift */; };
 		E3D71296225EE0E200FD7CAB /* DealsListViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71295225EE0E200FD7CAB /* DealsListViewEntity.swift */; };
 		E3D71298225EE5F400FD7CAB /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71297225EE5F400FD7CAB /* FloatExtension.swift */; };
+		E3E4B7CD225FE84C006AB94F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A76F95225FD7D90004C7B2 /* Nimble.framework */; };
+		E3E4B7CE225FE84F006AB94F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A76F94225FD7D90004C7B2 /* Quick.framework */; };
+		E3E4B7D0226003FE006AB94F /* DealsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7CF226003FE006AB94F /* DealsListPresenterTests.swift */; };
+		E3E4B7D222600570006AB94F /* DealsListRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7D122600570006AB94F /* DealsListRouterSpy.swift */; };
+		E3E4B7D42260061D006AB94F /* DealsListInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7D32260061D006AB94F /* DealsListInteractorSpy.swift */; };
+		E3E4B7D6226006C3006AB94F /* DealsListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7D5226006C3006AB94F /* DealsListViewControllerSpy.swift */; };
+		E3E4B7D822600E95006AB94F /* DealsListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7D722600E95006AB94F /* DealsListInteractorTests.swift */; };
+		E3E4B7DA22600F1B006AB94F /* DealsListWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7D922600F1B006AB94F /* DealsListWorkerSpy.swift */; };
+		E3E4B7DC226018F7006AB94F /* DealsListRequestSpy.json in Resources */ = {isa = PBXBuildFile; fileRef = E3E4B7DB226018F7006AB94F /* DealsListRequestSpy.json */; };
+		E3E4B7DE22601C76006AB94F /* DealsListRequestSpy.json in Resources */ = {isa = PBXBuildFile; fileRef = E3E4B7DB226018F7006AB94F /* DealsListRequestSpy.json */; };
+		E3E4B7E022601DA6006AB94F /* DealsListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7DF22601DA6006AB94F /* DealsListRouterTests.swift */; };
+		E3E4B7E222602027006AB94F /* DealsListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7E122602027006AB94F /* DealsListWorkerTests.swift */; };
+		E3E4B7E62260264D006AB94F /* NetworkSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B7E52260264D006AB94F /* NetworkSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +69,18 @@
 		E37A5315225EECF800FB1C99 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		E37A5317225FAE4C00FB1C99 /* DealsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsEntity.swift; sourceTree = "<group>"; };
 		E37A5319225FC88D00FB1C99 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		E3A76F92225FD5C20004C7B2 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		E3A76F94225FD7D90004C7B2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		E3A76F95225FD7D90004C7B2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		E3A76F9C225FE0200004C7B2 /* PeixeUrbanoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeixeUrbanoTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E3A76F9D225FE0210004C7B2 /* DealsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListViewControllerTests.swift; sourceTree = "<group>"; };
+		E3A76FA0225FE1650004C7B2 /* DealsListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListPresenterSpy.swift; sourceTree = "<group>"; };
 		E3D71239225E51A400FD7CAB /* PeixeUrbano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeixeUrbano.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D7123C225E51A400FD7CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D71243225E51A600FD7CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3D71246225E51A600FD7CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3D71248225E51A600FD7CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3D7124D225E51A600FD7CAB /* PeixeUrbanoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeixeUrbanoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3D71251225E51A600FD7CAB /* PeixeUrbanoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeixeUrbanoTests.swift; sourceTree = "<group>"; };
 		E3D71253225E51A600FD7CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3D71262225E5C5F00FD7CAB /* DealsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListProtocols.swift; sourceTree = "<group>"; };
 		E3D71264225E5E1700FD7CAB /* DealsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +104,16 @@
 		E3D71293225EDE1000FD7CAB /* Enuns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enuns.swift; sourceTree = "<group>"; };
 		E3D71295225EE0E200FD7CAB /* DealsListViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListViewEntity.swift; sourceTree = "<group>"; };
 		E3D71297225EE5F400FD7CAB /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
+		E3E4B7CF226003FE006AB94F /* DealsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListPresenterTests.swift; sourceTree = "<group>"; };
+		E3E4B7D122600570006AB94F /* DealsListRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListRouterSpy.swift; sourceTree = "<group>"; };
+		E3E4B7D32260061D006AB94F /* DealsListInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListInteractorSpy.swift; sourceTree = "<group>"; };
+		E3E4B7D5226006C3006AB94F /* DealsListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListViewControllerSpy.swift; sourceTree = "<group>"; };
+		E3E4B7D722600E95006AB94F /* DealsListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListInteractorTests.swift; sourceTree = "<group>"; };
+		E3E4B7D922600F1B006AB94F /* DealsListWorkerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListWorkerSpy.swift; sourceTree = "<group>"; };
+		E3E4B7DB226018F7006AB94F /* DealsListRequestSpy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DealsListRequestSpy.json; sourceTree = "<group>"; };
+		E3E4B7DF22601DA6006AB94F /* DealsListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListRouterTests.swift; sourceTree = "<group>"; };
+		E3E4B7E122602027006AB94F /* DealsListWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListWorkerTests.swift; sourceTree = "<group>"; };
+		E3E4B7E52260264D006AB94F /* NetworkSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E4B7CE225FE84F006AB94F /* Quick.framework in Frameworks */,
+				E3E4B7CD225FE84C006AB94F /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,9 +140,54 @@
 		E37A5314225EECF700FB1C99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3A76F95225FD7D90004C7B2 /* Nimble.framework */,
+				E3A76F94225FD7D90004C7B2 /* Quick.framework */,
 				E37A5315225EECF800FB1C99 /* Kingfisher.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3A76F98225FD83C0004C7B2 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E3A76F9C225FE0200004C7B2 /* PeixeUrbanoTests-Bridging-Header.h */,
+				E3D71253225E51A600FD7CAB /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		E3A76F99225FD8620004C7B2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E3A76F9B225FDF4A0004C7B2 /* DealsList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E3A76F9B225FDF4A0004C7B2 /* DealsList */ = {
+			isa = PBXGroup;
+			children = (
+				E3A76F9F225FE14C0004C7B2 /* Spy */,
+				E3E4B7D722600E95006AB94F /* DealsListInteractorTests.swift */,
+				E3E4B7CF226003FE006AB94F /* DealsListPresenterTests.swift */,
+				E3E4B7DF22601DA6006AB94F /* DealsListRouterTests.swift */,
+				E3A76F9D225FE0210004C7B2 /* DealsListViewControllerTests.swift */,
+				E3E4B7E122602027006AB94F /* DealsListWorkerTests.swift */,
+			);
+			path = DealsList;
+			sourceTree = "<group>";
+		};
+		E3A76F9F225FE14C0004C7B2 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				E3E4B7D32260061D006AB94F /* DealsListInteractorSpy.swift */,
+				E3A76FA0225FE1650004C7B2 /* DealsListPresenterSpy.swift */,
+				E3E4B7D122600570006AB94F /* DealsListRouterSpy.swift */,
+				E3E4B7D5226006C3006AB94F /* DealsListViewControllerSpy.swift */,
+				E3E4B7D922600F1B006AB94F /* DealsListWorkerSpy.swift */,
+				E3E4B7DB226018F7006AB94F /* DealsListRequestSpy.json */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 		E3D71230225E51A400FD7CAB = {
@@ -119,8 +196,9 @@
 				E3D7123B225E51A400FD7CAB /* PeixeUrbano */,
 				E3D71250225E51A600FD7CAB /* PeixeUrbanoTests */,
 				E3D7123A225E51A400FD7CAB /* Products */,
-				E37A5312225EEC7E00FB1C99 /* .gitignore */,
 				E37A5314225EECF700FB1C99 /* Frameworks */,
+				E37A5312225EEC7E00FB1C99 /* .gitignore */,
+				E3A76F92225FD5C20004C7B2 /* Cartfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,8 +226,9 @@
 		E3D71250225E51A600FD7CAB /* PeixeUrbanoTests */ = {
 			isa = PBXGroup;
 			children = (
-				E3D71251225E51A600FD7CAB /* PeixeUrbanoTests.swift */,
-				E3D71253225E51A600FD7CAB /* Info.plist */,
+				E3E4B7E322602636006AB94F /* Commons */,
+				E3A76F99225FD8620004C7B2 /* Modules */,
+				E3A76F98225FD83C0004C7B2 /* SupportFiles */,
 			);
 			path = PeixeUrbanoTests;
 			sourceTree = "<group>";
@@ -257,6 +336,30 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		E3E4B7E322602636006AB94F /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E3E4B7E422602640006AB94F /* Libraries */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		E3E4B7E422602640006AB94F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				E3E4B7E72260265F006AB94F /* Spy */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		E3E4B7E72260265F006AB94F /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				E3E4B7E52260264D006AB94F /* NetworkSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,6 +414,7 @@
 					};
 					E3D7124C225E51A600FD7CAB = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 						TestTargetID = E3D71238225E51A400FD7CAB;
 					};
 				};
@@ -339,8 +443,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E4B7DE22601C76006AB94F /* DealsListRequestSpy.json in Resources */,
 				E3D71247225E51A600FD7CAB /* LaunchScreen.storyboard in Resources */,
 				E37A5313225EEC7E00FB1C99 /* .gitignore in Resources */,
+				E3A76F93225FD5C20004C7B2 /* Cartfile in Resources */,
 				E3D71244225E51A600FD7CAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E4B7DC226018F7006AB94F /* DealsListRequestSpy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +471,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -413,7 +522,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3D71252225E51A600FD7CAB /* PeixeUrbanoTests.swift in Sources */,
+				E3E4B7D6226006C3006AB94F /* DealsListViewControllerSpy.swift in Sources */,
+				E3E4B7E62260264D006AB94F /* NetworkSpy.swift in Sources */,
+				E3A76F9E225FE0210004C7B2 /* DealsListViewControllerTests.swift in Sources */,
+				E3E4B7D222600570006AB94F /* DealsListRouterSpy.swift in Sources */,
+				E3E4B7D42260061D006AB94F /* DealsListInteractorSpy.swift in Sources */,
+				E3E4B7D0226003FE006AB94F /* DealsListPresenterTests.swift in Sources */,
+				E3A76FA1225FE1650004C7B2 /* DealsListPresenterSpy.swift in Sources */,
+				E3E4B7DA22600F1B006AB94F /* DealsListWorkerSpy.swift in Sources */,
+				E3E4B7E222602027006AB94F /* DealsListWorkerTests.swift in Sources */,
+				E3E4B7E022601DA6006AB94F /* DealsListRouterTests.swift in Sources */,
+				E3E4B7D822600E95006AB94F /* DealsListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,9 +727,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XPQRN7QUXG;
-				INFOPLIST_FILE = PeixeUrbanoTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PeixeUrbanoTests/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,6 +742,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.julianoterres.PeixeUrbanoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PeixeUrbanoTests/SupportFiles/PeixeUrbanoTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeixeUrbano.app/PeixeUrbano";
@@ -629,9 +755,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XPQRN7QUXG;
-				INFOPLIST_FILE = PeixeUrbanoTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PeixeUrbanoTests/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,6 +770,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.julianoterres.PeixeUrbanoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PeixeUrbanoTests/SupportFiles/PeixeUrbanoTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeixeUrbano.app/PeixeUrbano";

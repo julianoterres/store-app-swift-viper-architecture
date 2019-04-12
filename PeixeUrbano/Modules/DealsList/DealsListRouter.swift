@@ -14,7 +14,7 @@ class DealsListRouter: DealsListRouterProtocol {
   
   weak var viewController: UIViewController?
   
-  func createModule(screenType: ScreenType) -> DealsListViewController {
+  func buildModule(screenType: ScreenType) -> UIViewController {
     let viewController = DealsListViewController()
     let presenter = DealsListPresenter()
     let interactor = DealsListInteractor()
