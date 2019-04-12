@@ -31,7 +31,7 @@ class DealsListViewControllerTests: QuickSpec {
       }
       
       describe("When viewController execute the method viewDidLoad") {
-        it("then should call a method fetchDeals at presenter") {
+        it("should call a method fetchDeals at presenter") {
           expect(presenter.functionCalled) == true
         }
       }

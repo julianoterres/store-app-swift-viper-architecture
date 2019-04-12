@@ -39,7 +39,7 @@ class DealsListWorkerTests: QuickSpec {
             worker.network = network
             worker.fetchDeals(url: URL(string: "https://google.com")!)
           }
-          it("then should call a method fetchedDeals at interactor") {
+          it("should call a method fetchedDeals at interactor") {
             expect(interactor.functionCalled) == true
           }
         }
@@ -50,7 +50,7 @@ class DealsListWorkerTests: QuickSpec {
             worker.network = network
             worker.fetchDeals(url: URL(string: "https://google.com")!)
           }
-          it("then should call a method fetchedDealsFail at interactor") {
+          it("should call a method fetchedDealsFail at interactor") {
             expect(interactor.functionCalled) == true
           }
         }
@@ -65,7 +65,7 @@ class DealsListWorkerTests: QuickSpec {
             worker.network = network
             worker.fetchDealsCity()
           }
-          it("then should call a method fetchedDeals at interactor") {
+          it("should call a method fetchedDeals at interactor") {
             expect(interactor.functionCalled) == true
           }
         }
@@ -76,7 +76,7 @@ class DealsListWorkerTests: QuickSpec {
             worker.network = network
             worker.fetchDealsCity()
           }
-          it("then should call a method fetchedDealsFail at interactor") {
+          it("should call a method fetchedDealsFail at interactor") {
             expect(interactor.functionCalled) == true
           }
         }
@@ -93,7 +93,7 @@ class DealsListWorkerTests: QuickSpec {
           worker.network = network
           worker.fetchDealsTravel()
         }
-        it("then should call a method fetchedDeals at interactor") {
+        it("should call a method fetchedDeals at interactor") {
           expect(interactor.functionCalled) == true
         }
       }
@@ -104,7 +104,7 @@ class DealsListWorkerTests: QuickSpec {
           worker.network = network
           worker.fetchDealsTravel()
         }
-        it("then should call a method fetchedDealsFail at interactor") {
+        it("should call a method fetchedDealsFail at interactor") {
           expect(interactor.functionCalled) == true
         }
       }
@@ -119,7 +119,7 @@ class DealsListWorkerTests: QuickSpec {
           worker.network = network
           worker.fetchDealsProducts()
         }
-        it("then should call a method fetchedDeals at interactor") {
+        it("should call a method fetchedDeals at interactor") {
           expect(interactor.functionCalled) == true
         }
       }
@@ -130,7 +130,7 @@ class DealsListWorkerTests: QuickSpec {
           worker.network = network
           worker.fetchDealsProducts()
         }
-        it("then should call a method fetchedDealsFail at interactor") {
+        it("should call a method fetchedDealsFail at interactor") {
           expect(interactor.functionCalled) == true
         }
       }

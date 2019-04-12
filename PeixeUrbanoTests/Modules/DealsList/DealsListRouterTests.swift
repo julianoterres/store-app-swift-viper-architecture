@@ -28,7 +28,7 @@ class DealsListRouterTests: QuickSpec {
         beforeEach {
           viewController = router.buildModule(screenType: .city)
         }
-        it("then should return a viewController") {
+        it("should return a viewController") {
           expect(viewController).to(beAKindOf(UIViewController.self))
         }
       }

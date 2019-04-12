@@ -39,7 +39,7 @@ class DealsListPresenterTests: QuickSpec {
             presenter.screenType = .city
             presenter.fetchDeals()
           }
-          it("then should call a method fetchDealsCity at interactor") {
+          it("should call a method fetchDealsCity at interactor") {
             expect(interactor.functionCalled) == true
           }
         }
@@ -49,7 +49,7 @@ class DealsListPresenterTests: QuickSpec {
             presenter.screenType = .travel
             presenter.fetchDeals()
           }
-          it("then should call a method fetchDealsTravel at interactor") {
+          it("should call a method fetchDealsTravel at interactor") {
             expect(interactor.functionCalled) == true
           }
         }
@@ -59,7 +59,7 @@ class DealsListPresenterTests: QuickSpec {
             presenter.screenType = .products
             presenter.fetchDeals()
           }
-          it("then should call a method fetchDealsProducts at interactor") {
+          it("should call a method fetchDealsProducts at interactor") {
             expect(interactor.functionCalled) == true
           }
         }
@@ -73,7 +73,7 @@ class DealsListPresenterTests: QuickSpec {
             presenter.screenType = .city
             presenter.fetchedDeals(deals: [])
           }
-          it("then should call a method displayFetchedDeals at viewcontroller") {
+          it("should call a method displayFetchedDeals at viewcontroller") {
             expect(viewController.functionCalled) == true
           }
         }
@@ -83,7 +83,7 @@ class DealsListPresenterTests: QuickSpec {
             presenter.screenType = .travel
             presenter.fetchedDeals(deals: [])
           }
-          it("then should call a method displayFetchedDeals at viewcontroller") {
+          it("should call a method displayFetchedDeals at viewcontroller") {
             expect(viewController.functionCalled) == true
           }
         }
@@ -93,7 +93,7 @@ class DealsListPresenterTests: QuickSpec {
             presenter.screenType = .products
             presenter.fetchedDeals(deals: [])
           }
-          it("then should call a method displayFetchedDeals at viewcontroller") {
+          it("should call a method displayFetchedDeals at viewcontroller") {
             expect(viewController.functionCalled) == true
           }
         }
@@ -104,7 +104,7 @@ class DealsListPresenterTests: QuickSpec {
         beforeEach {
           presenter.fetchedDealsFail(message: "Error message")
         }
-        it("then should call a method showAlert at router") {
+        it("should call a method showAlert at router") {
           expect(router.functionCalled) == true
         }
       }

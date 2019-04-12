@@ -33,7 +33,7 @@ class DealsListInteractorTests: QuickSpec {
         beforeEach {
           interactor.fetchDealsCity()
         }
-        it("then should call a method fetchDealsCity at worker") {
+        it("should call a method fetchDealsCity at worker") {
           expect(worker.functionCalled) == true
         }
       }
@@ -42,7 +42,7 @@ class DealsListInteractorTests: QuickSpec {
         beforeEach {
           interactor.fetchDealsTravel()
         }
-        it("then should call a method fetchDealsTravel at worker") {
+        it("should call a method fetchDealsTravel at worker") {
           expect(worker.functionCalled) == true
         }
       }
@@ -51,7 +51,7 @@ class DealsListInteractorTests: QuickSpec {
         beforeEach {
           interactor.fetchDealsProducts()
         }
-        it("then should call a method fetchDealsProducts at worker") {
+        it("should call a method fetchDealsProducts at worker") {
           expect(worker.functionCalled) == true
         }
       }
@@ -67,7 +67,7 @@ class DealsListInteractorTests: QuickSpec {
             fail("Failed load DealsListRequestSpy")
           }
         }
-        it("then should call a method fetchedDeals at presenter") {
+        it("should call a method fetchedDeals at presenter") {
           expect(presenter.functionCalled) == true
         }
       }
@@ -76,7 +76,7 @@ class DealsListInteractorTests: QuickSpec {
         beforeEach {
           interactor.fetchedDealsFail(message: "Fail deals fetch")
         }
-        it("then should call a method fetchedDealsFail at presenter") {
+        it("should call a method fetchedDealsFail at presenter") {
           expect(presenter.functionCalled) == true
         }
       }
