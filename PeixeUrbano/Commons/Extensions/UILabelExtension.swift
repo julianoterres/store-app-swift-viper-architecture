@@ -12,22 +12,22 @@ extension UILabel {
   
   func setFontTitle() {
     self.font = UIFont(name: "HelveticaNeue", size: 14)
-    self.textColor = Colors.title
+    self.textColor = .defaultTitle
   }
   
   func setFontTitleWhite() {
     self.font = UIFont(name: "HelveticaNeue-Bold", size: 16)
-    self.textColor = Colors.titleWhite
+    self.textColor = .defaultTitleWhite
   }
   
   func setFontSubtitle() {
     self.font = UIFont(name: "HelveticaNeue", size: 12)
-    self.textColor = Colors.subtitle
+    self.textColor = .defaultSubtitle
   }
   
   func setFontPrice() {
     self.font = UIFont(name: "HelveticaNeue-Bold", size: 16)
-    self.textColor = Colors.orange
+    self.textColor = .defaultOrange
   }
   
 }

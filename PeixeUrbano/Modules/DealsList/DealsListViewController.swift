@@ -42,8 +42,8 @@ class DealsListViewController: UIViewController {
   }
   
   func setupElements() {
-    UIApplication.shared.statusBarView?.backgroundColor = Colors.blue
-    view.backgroundColor = Colors.lightGrey
+    UIApplication.shared.statusBarView?.backgroundColor = .defaultBlue
+    view.backgroundColor = .defaultLightGrey
     tableView.delegate = self
     tableView.dataSource = self
     tableView.estimatedRowHeight = DealsListCell.height
@@ -53,7 +53,7 @@ class DealsListViewController: UIViewController {
     tableView.isHidden = true
     loader.startAnimating()
     loader.color = .black
-    navigation.backgroundColor = Colors.blue
+    navigation.backgroundColor = .defaultBlue
     navigationTitle.setFontTitleWhite()
   }
   

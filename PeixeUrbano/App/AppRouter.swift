@@ -23,7 +23,7 @@ class AppRouter {
     viewControllerProducts.tabBarItem = UITabBarItem(title: "Produtos", image: UIImage(named: "shopping_bag"), selectedImage: UIImage(named: "shopping_bag"))
     
     let tabBarController = UITabBarController()
-    tabBarController.tabBar.tintColor = Colors.orange
+    tabBarController.tabBar.tintColor = .defaultOrange
     tabBarController.viewControllers = [viewControllerCity, viewControllerTravel, viewControllerProducts]
     
     return tabBarController

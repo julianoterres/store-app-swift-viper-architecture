@@ -26,7 +26,7 @@
 		E3D7126F225E602500FD7CAB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7126E225E602500FD7CAB /* AppRouter.swift */; };
 		E3D71275225E6A6400FD7CAB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71274225E6A6400FD7CAB /* UIViewExtension.swift */; };
 		E3D7127A225E737A00FD7CAB /* DealsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71279225E737A00FD7CAB /* DealsListCell.swift */; };
-		E3D7127C225EB0F500FD7CAB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7127B225EB0F500FD7CAB /* Colors.swift */; };
+		E3D7127C225EB0F500FD7CAB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7127B225EB0F500FD7CAB /* UIColorExtension.swift */; };
 		E3D7127E225EB27E00FD7CAB /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7127D225EB27E00FD7CAB /* UILabelExtension.swift */; };
 		E3D71280225EB43000FD7CAB /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D7127F225EB43000FD7CAB /* UIStackViewExtension.swift */; };
 		E3D71283225EC25F00FD7CAB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D71282225EC25F00FD7CAB /* Network.swift */; };
@@ -91,7 +91,7 @@
 		E3D7126E225E602500FD7CAB /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		E3D71274225E6A6400FD7CAB /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E3D71279225E737A00FD7CAB /* DealsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsListCell.swift; sourceTree = "<group>"; };
-		E3D7127B225EB0F500FD7CAB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E3D7127B225EB0F500FD7CAB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E3D7127D225EB27E00FD7CAB /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		E3D7127F225EB43000FD7CAB /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		E3D71282225EC25F00FD7CAB /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -295,6 +295,7 @@
 		E3D71271225E685200FD7CAB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E3D7127B225EB0F500FD7CAB /* UIColorExtension.swift */,
 				E3D71297225EE5F400FD7CAB /* FloatExtension.swift */,
 				E3D7127D225EB27E00FD7CAB /* UILabelExtension.swift */,
 				E3D7127F225EB43000FD7CAB /* UIStackViewExtension.swift */,
@@ -307,7 +308,6 @@
 		E3D71276225E6ECD00FD7CAB /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				E3D7127B225EB0F500FD7CAB /* Colors.swift */,
 				E3D71293225EDE1000FD7CAB /* Enuns.swift */,
 				E3D71291225EDDA500FD7CAB /* Protocols.swift */,
 			);
@@ -491,7 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D71275225E6A6400FD7CAB /* UIViewExtension.swift in Sources */,
-				E3D7127C225EB0F500FD7CAB /* Colors.swift in Sources */,
+				E3D7127C225EB0F500FD7CAB /* UIColorExtension.swift in Sources */,
 				E3D7123D225E51A400FD7CAB /* AppDelegate.swift in Sources */,
 				E3D71296225EE0E200FD7CAB /* DealsListViewEntity.swift in Sources */,
 				E3D71290225EDCAF00FD7CAB /* Api.swift in Sources */,
