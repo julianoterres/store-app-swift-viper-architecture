@@ -69,6 +69,8 @@ class DealsListInteractorTests: QuickSpec {
         }
         it("should call a method fetchedDeals at presenter") {
           expect(presenter.functionCalled) == true
+          expect(presenter.contentPassed).notTo(beNil())
+          expect(presenter.contentPassed?.count) == 1
         }
       }
       
@@ -78,6 +80,7 @@ class DealsListInteractorTests: QuickSpec {
         }
         it("should call a method fetchedDealsFail at presenter") {
           expect(presenter.functionCalled) == true
+          expect(presenter.messageErrorPassed).notTo(beNil())
         }
       }
       

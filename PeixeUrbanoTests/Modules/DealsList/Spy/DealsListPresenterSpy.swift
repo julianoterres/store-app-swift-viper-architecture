@@ -15,6 +15,8 @@ class DealsListPresenterSpy {
   var interactor: DealsListPresenterToInteractorProtocol?
   var router: DealsListPresenterToRouterProtocol?
   var functionCalled = false
+  var contentPassed: [DealsEntity]?
+  var messageErrorPassed: String?
   
 }
 
@@ -32,10 +34,13 @@ extension DealsListPresenterSpy: DealsListInteractorToPresenter{
   
   func fetchedDeals(deals: [DealsEntity]) {
     functionCalled = true
+    contentPassed = deals
   }
   
   func fetchedDealsFail(message: String) {
     functionCalled = true
+    messageErrorPassed = message
+    
   }
   
 }

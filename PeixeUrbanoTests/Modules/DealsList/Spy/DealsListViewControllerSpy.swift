@@ -9,18 +9,15 @@
 import UIKit
 @testable import PeixeUrbano
 
-// MARK: Methods of DealsListViewControllerSpy
-class DealsListViewControllerSpy: UIViewController {
+// MARK: Methods of DealsListPresenterToViewControllerProtocol
+class DealsListViewControllerSpy: DealsListPresenterToViewControllerProtocol {
   
   var functionCalled = false
-  
-}
-
-// MARK: Methods of DealsListPresenterToViewControllerProtocol
-extension DealsListViewControllerSpy: DealsListPresenterToViewControllerProtocol {
+  var contentPassed: DealsListViewEntity?
   
   func displayFetchedDeals(dealsView: DealsListViewEntity){
     functionCalled = true
+    contentPassed = dealsView
   }
   
 }

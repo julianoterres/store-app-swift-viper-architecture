@@ -14,6 +14,7 @@ class DealsListRouterSpy: DealsListRouterProtocol {
   
   weak var viewController: UIViewController?
   var functionCalled = false
+  var messageErrorPassed: String?
   
   func buildModule(screenType: ScreenType) -> UIViewController {
     return UIViewController()
@@ -26,6 +27,7 @@ extension DealsListRouterSpy: DealsListPresenterToRouterProtocol {
   
   func showAlert(message: String) {
     functionCalled = true
+    messageErrorPassed = message
   }
   
 }

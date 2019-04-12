@@ -70,31 +70,37 @@ class DealsListPresenterTests: QuickSpec {
         
         context("and screenType is city") {
           beforeEach {
+            let deal = DealsEntity(image: URL(string: "https://google.com")!, title: "Tile Deal", partner: "Partner Name", price: "R$ 1,00")
             presenter.screenType = .city
-            presenter.fetchedDeals(deals: [])
+            presenter.fetchedDeals(deals: [deal])
           }
           it("should call a method displayFetchedDeals at viewcontroller") {
             expect(viewController.functionCalled) == true
+            expect(viewController.contentPassed).notTo(beNil())
           }
         }
         
         context("and screenType is travel") {
           beforeEach {
+            let deal = DealsEntity(image: URL(string: "https://google.com")!, title: "Tile Deal", partner: "Partner Name", price: "R$ 1,00")
             presenter.screenType = .travel
-            presenter.fetchedDeals(deals: [])
+            presenter.fetchedDeals(deals: [deal])
           }
           it("should call a method displayFetchedDeals at viewcontroller") {
             expect(viewController.functionCalled) == true
+            expect(viewController.contentPassed).notTo(beNil())
           }
         }
         
         context("and screenType is products") {
           beforeEach {
+            let deal = DealsEntity(image: URL(string: "https://google.com")!, title: "Tile Deal", partner: "Partner Name", price: "R$ 1,00")
             presenter.screenType = .products
-            presenter.fetchedDeals(deals: [])
+            presenter.fetchedDeals(deals: [deal])
           }
           it("should call a method displayFetchedDeals at viewcontroller") {
             expect(viewController.functionCalled) == true
+            expect(viewController.contentPassed).notTo(beNil())
           }
         }
         
@@ -106,6 +112,7 @@ class DealsListPresenterTests: QuickSpec {
         }
         it("should call a method showAlert at router") {
           expect(router.functionCalled) == true
+          expect(router.messageErrorPassed) == "Error message"
         }
       }
       
