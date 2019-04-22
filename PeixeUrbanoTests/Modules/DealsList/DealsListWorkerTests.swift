@@ -37,7 +37,7 @@ class DealsListWorkerTests: QuickSpec {
           beforeEach {
             network = NetworkSuccessSpy()
             worker.network = network
-            worker.fetchDeals(url: URL(string: "https://google.com")!)
+            worker.fetchDeals(url: api.urlCity())
           }
           it("should call a method fetchedDeals at interactor") {
             expect(interactor.functionCalled) == true
@@ -48,7 +48,7 @@ class DealsListWorkerTests: QuickSpec {
           beforeEach {
             network = NetworkFailSpy()
             worker.network = network
-            worker.fetchDeals(url: URL(string: "https://google.com")!)
+            worker.fetchDeals(url: api.urlCity())
           }
           it("should call a method fetchedDealsFail at interactor") {
             expect(interactor.functionCalled) == true
