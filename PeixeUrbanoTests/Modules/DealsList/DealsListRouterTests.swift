@@ -24,7 +24,7 @@ class DealsListRouterTests: QuickSpec {
         router = DealsListRouter()
       }
       
-      describe("When router execute the method createModule") {
+      describe("When router execute the method buildModule") {
         beforeEach {
           viewController = router.buildModule(screenType: .city)
         }
